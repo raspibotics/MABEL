@@ -51,7 +51,7 @@ class IKSolve:  # IKSolve - Inverse Kinematics solver for Raspibotics' Balancing
  
  
 IKSolve = IKSolve()
-home_servos()
+home_servos()  # Reset Servos to default position
  
  
 while True:
