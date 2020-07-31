@@ -1,0 +1,37 @@
+from IKSolve2 import IKSolve
+import piconzero as pz
+ 
+# Initialise Piconzero HAT
+pz.init()
+# Servo Pins for Piconzero HAT
+servo0 = 0
+servo1 = 1
+servo2 = 2
+servo3 = 3
+# Configure Output to Servo Mode
+pz.setOutputConfig(servo0, 2)
+pz.setOutputConfig(servo1, 2)
+pz.setOutputConfig(servo2, 2)
+pz.setOutputConfig(servo3, 2)
+# Servo Home Values (degrees)
+ru_home = 50   # Right leg upper joint home position (servo_angle[0])
+rl_home = 109   # Right leg lower joint home position (servo_angle[1])
+lu_home = 52   # Left leg upper joint home position (servo_angle[2])
+ll_home = 23   # Left leg lower joint home position (servo_angle[3])
+# Set Servos to Home Position
+pz.setOutput(servo0, ru_home)
+pz.setOutput(servo1, rl_home)
+pz.setOutput(servo2, lu_home)
+pz.setOutput(servo3, ll_home)
+ 
+ 
+IKSolve = IKSolve(ru_home, rl_home, lu_home, ll_home)  # Pass home positions to IK class
+ 
+while True:
+    x = int(input('x:'))
+    y = int(input('y:'))
+    servo_angle = IKSolve.translate_xy(x, y)  # servo_angles[0] refers to the right leg upper servo etc
+    pz.setOutput(servo0, servo_angle[0])
+    pz.setOutput(servo1, servo_angle[1])
+    pz.setOutput(servo2, servo_angle[2])
+    pz.setOutput(servo3, servo_angle[3])
