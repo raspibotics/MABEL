@@ -6,7 +6,7 @@
 # x is the distance between the upper leg pivot and wheel centre (Vertically) - acceptable range for MABEL (160-98mm)
 # y is the distance between the upper leg pivot and wheel centre (Horizontally) - acceptable range for MABEL (-50, 50mm)
 
-import math
+from math import acos, degrees, atan2
 
 
 class IKSolve:  # IKSolve - Inverse Kinematics solver for MABEL
@@ -25,14 +25,14 @@ class IKSolve:  # IKSolve - Inverse Kinematics solver for MABEL
         self.b_const_1 = 2 * upper_leg * lower_leg  # 2bc
 
     def translate_xy(self, x, y, flip=False):  # translate_xy(x, y) -Calculates the required angles to move to (x, y) mm
-        if x == 0 and y == 0:
+        if x == 0 and y == 0:  # (0, 0) resets servos to home position
             return self.ru_home, self.rl_home, self.lu_home, self.ll_home
         else:
-            angle_a = math.degrees(math.acos(((self.a_const_0 + (x ** 2)) /  # A = Cos^-1((b^2+c^2-a^2)/2bc)
-                                              (self.a_const_1 * x))))
-            angle_a += math.degrees(math.atan2(y, x))  # Tan^-1(y/x)
-            angle_b = math.degrees(math.acos((self.b_const_0 - (x ** 2 + y ** 2)) /  # A = Cos^-1((b^2+c^2-a^2)/2bc)
-                                             self.b_const_1))
+            angle_a = degrees(acos(((self.a_const_0 + (x ** 2)) /  # A = Cos^-1((b^2+c^2-a^2)/2bc)
+                                    (self.a_const_1 * x))))
+            angle_a += degrees(atan2(y, x))  # Tan^-1(y/x)
+            angle_b = degrees(acos((self.b_const_0 - (x ** 2 + y ** 2)) /  # A = Cos^-1((b^2+c^2-a^2)/2bc)
+                                   self.b_const_1))
             angle_b = 180 - angle_b
         if flip is not False:
             return (self.ru_home - round(angle_a)), (self.rl_home + round(angle_b)), (
