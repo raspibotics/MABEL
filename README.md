@@ -12,6 +12,8 @@
      - [Mechanical assembly](#mechanical-assembly)
      - [Electronics assembly](#electronics-assembly)
  - [Installation](#installation)
+ - [Usage](#usage)
+     - [Inverse kinematics - Moving the legs](#iksolve---inverse-kinematics-for-mabel)
  - [Contact/Support](#contactsupport)
 
 ## About MABEL
@@ -78,6 +80,44 @@ Here are the Non 3D printable materials to build MABEL that **must be either pur
 ***This section will contain instructions about the construction of the robot electronics***
 
 ## Installation
+***This section will contain instructions about how to download and setup MABELs code and required libraries/dependencies***
+
+## Usage 
+### IKSolve - (Inverse Kinematics for MABEL)
+**IKSolve** is the class that handles the i**nverse kinematics** functionality for MABEL is [IKSolve.py](https://github.com/raspibotics/MABEL/blob/master/raspi_code/IKSolve.py) and allows for the legs to be translated using **(x, y)** coordinates. It's really simple to use, all that you need to specify are the **home values of each servo** (these are the angles that when passed over to your servos, make the legs point **directly and straight downwards** at **90 degrees**). 
+
+ 
+ *The code below is taken directly from [IKDemo.py](https://github.com/raspibotics/MABEL/blob/master/raspi_code/IKDemo.py)*
+
+```python
+from IKSolve import IKSolve
+
+# Servo Home Values (degrees)
+ru_home = 50   # Right leg upper joint home position (servo_angle[0])
+rl_home = 109   # Right leg lower joint home position (servo_angle[1])
+lu_home = 52   # Left leg upper joint home position (servo_angle[2])
+ll_home = 23   # Left leg lower joint home position (servo_angle[3])
+ 
+IKSolve = IKSolve(ru_home, rl_home, lu_home, ll_home)  # Pass home positions to IK class
+```
+***The class can also be initialised with different leg length segments but these are best left to default unless you have changed the length of any of the leg components.***
+```python
+def __init__(self, ru_home, rl_home, lu_home,  
+                 ll_home, upper_leg=92, lower_leg=75):
+```
+To recieve suitable angles for each servo to move to (x, y) you must use `translate_xy(self, x, y, flip=False)`
+
+- **x translates the robot leg vertically and y translates the leg horizontally**, each value should be in integer mm
+  
+ - **x is the distance between the upper leg pivot and wheel centre** (Vertically) - acceptable range for MABEL (160-98mm)
+  
+ - **y is the distance between the upper leg pivot and wheel centre** (Horizontally) - acceptable range for MABEL (-50, 50mm)
+ 
+```python
+  servo_angle = IKSolve.translate_xy(x, y, flip=False) 
+  # The angles calculated are stored in a tuple E.g. servo_angles[0-3], you can pass these values to your servo controller code
+  
+```
 
 
 ## Contact/Support
