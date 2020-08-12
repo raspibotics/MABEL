@@ -11,6 +11,7 @@
  - [Build instructions](#build-instructions)
      - [Mechanical assembly](#mechanical-assembly)
      - [Electronics assembly](#electronics-assembly)
+ - [Installation](#installation)
  - [Contact/Support](#contactsupport)
 
 ## About MABEL
@@ -75,6 +76,8 @@ Here are the Non 3D printable materials to build MABEL that **must be either pur
 ***This section will contain instructions about the construction of the robot chassis and  frame***
 ### Electronics Assembly
 ***This section will contain instructions about the construction of the robot electronics***
+
+## Installation
 
 
 ## Contact/Support
