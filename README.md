@@ -105,7 +105,7 @@ IKSolve = IKSolve(ru_home, rl_home, lu_home, ll_home)  # Pass home positions to 
 def __init__(self, ru_home, rl_home, lu_home,  
                  ll_home, upper_leg=92, lower_leg=75):
 ```
-To recieve suitable angles for each servo to move to (x, y) you must use `translate_xy(self, x, y, flip=False)`
+To recieve suitable angles for each servo to move to (x, y) you must use `translate_xy(self, x, y, flip=False)` (Flip inverts the direction that the legs bend, by default this should be set **False**)
 
 - **x translates the robot leg vertically and y translates the leg horizontally**, each value should be in integer mm
   
@@ -115,8 +115,8 @@ To recieve suitable angles for each servo to move to (x, y) you must use `transl
  
 ```python
   servo_angle = IKSolve.translate_xy(x, y, flip=False) 
-  # The angles calculated are stored in a tuple E.g. servo_angles[0-3], you can pass these values to your servo controller code
-  
+  # The angles calculated are stored in a tuple E.g. servo_angles[0-3]
+  # You can pass these values to your servo controller code
 ```
 
 
