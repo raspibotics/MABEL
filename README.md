@@ -18,7 +18,7 @@ MABEL has built on the open source [YABR](http://http://www.brokking.net/yabr_ma
 ### Features and design 
 Some of the stand-out features that make MABEL different from other balancing robots are:
 - **Movable Legs** (**Enhanced mobility**, **terrain** and **stabilisation** capabilities)
-- **Inverse Kinematics** for each legs for accurate translation in (x, y) coordinates using the [IKSolve.py](https://github.com/raspibotics/MABEL/blob/master/Raspberry%20Pi%20Code/IKSolve2.py) class
+- **Inverse Kinematics** for each leg, enabling accurate translation in (x, y) coordinates using the [IKSolve.py](https://github.com/raspibotics/MABEL/blob/master/Raspberry%20Pi%20Code/IKSolve2.py) class
 - **Raspberry Pi** enabled (for **Bluetooth control**, **wireless connectivity** and **Computer Vision** capabilities)
 - **Common/cheap build materials** (All of the materials can be purchased off of Amazon/Ebay for a low cost)
 - **Stepper Motors** (Accurate positioning and precise control)
@@ -26,18 +26,38 @@ Some of the stand-out features that make MABEL different from other balancing ro
 ## Bill of materials
 ### 3D Printable
 3D Printable files are found in [/CAD/3D Models (To Print)](https://github.com/raspibotics/MABEL/tree/master/CAD/3D%20Models%20(To%20print))
-- **1x** [BatteryPack](https://github.com/raspibotics/MABEL/blob/master/CAD/3D%20Models%20(To%20print)/BatteryPack.stl) (**Optional** - holds LiPo battery onto back of robot with M5 Bolts)
+- [BatteryPack](https://github.com/raspibotics/MABEL/blob/master/CAD/3D%20Models%20(To%20print)/BatteryPack.stl) (**Optional** - holds LiPo battery onto back of robot with M5 Bolts)
 - **2x** [BodyPanel](https://github.com/raspibotics/MABEL/blob/master/CAD/3D%20Models%20(To%20print)/BodyPanel.stl) (Mounting for the 'Hip' servos and side panels of the body)
-- **1x** [BodyTop](https://github.com/raspibotics/MABEL/blob/master/CAD/3D%20Models%20(To%20print)/BodyTop.stl)
+- [BodyTop](https://github.com/raspibotics/MABEL/blob/master/CAD/3D%20Models%20(To%20print)/BodyTop.stl)
 - **4x** [DriverGear](https://github.com/raspibotics/MABEL/blob/master/CAD/3D%20Models%20(To%20print)/DriverGear.stl)
-- **1x** [Housing](https://github.com/raspibotics/MABEL/blob/master/CAD/3D%20Models%20(To%20print)/Housing.stl) (**LOWER** body housing for MABEL)
+- [Housing](https://github.com/raspibotics/MABEL/blob/master/CAD/3D%20Models%20(To%20print)/Housing.stl) (**LOWER** body housing for MABEL)
 - **2x** [LowerLeg](https://github.com/raspibotics/MABEL/blob/master/CAD/3D%20Models%20(To%20print)/LowerLeg.stl)
 - **2x** [UpperLeg](https://github.com/raspibotics/MABEL/blob/master/CAD/3D%20Models%20(To%20print)/UpperLeg.stl)
-- **1x** [PanBracketHead](https://github.com/raspibotics/MABEL/blob/master/CAD/3D%20Models%20(To%20print)/PanBracketHead.stl) (**Optional** Pan servo bracket for head assembly)
-- **1x** [TiltBracketHead](https://github.com/raspibotics/MABEL/blob/master/CAD/3D%20Models%20(To%20print)/TiltBracketHead.stl) (**Optional** Tilt servo bracket for head assembly)
-- **1x** [UpperBody](https://github.com/raspibotics/MABEL/blob/master/CAD/3D%20Models%20(To%20print)/UpperBody.stl) (**UPPER** body housing for MABEL)
+- [PanBracketHead](https://github.com/raspibotics/MABEL/blob/master/CAD/3D%20Models%20(To%20print)/PanBracketHead.stl) (**Optional** Pan servo bracket for head assembly)
+- [TiltBracketHead](https://github.com/raspibotics/MABEL/blob/master/CAD/3D%20Models%20(To%20print)/TiltBracketHead.stl) (**Optional** Tilt servo bracket for head assembly)
+- [UpperBody](https://github.com/raspibotics/MABEL/blob/master/CAD/3D%20Models%20(To%20print)/UpperBody.stl) (**UPPER** body housing for MABEL)
 - **2x** [Wheel](https://github.com/raspibotics/MABEL/blob/master/CAD/3D%20Models%20(To%20print)/Wheel.stl) (**Optional** You can 3D Print your own set of wheels, or buy wheels)
 
 ### Non 3D Printable
-Here are the Non 3D printable materials to build MABEL that **must be either purchased or sourced**. **This includes all of the electronics, mechanical hardware and fixings.**
+Here are the Non 3D printable materials to build MABEL that **must be either purchased or sourced**. **This includes all of the electronics, mechanical hardware and fixings.** It is **recommended to overbuy the nuts and bolts fixings, as the exact number can change between builds.**
+##### Electronic components
+- **Raspberry Pi** Zero W
+- **PCA9865** Servo Controller
+- **Variable voltage regulator** (**Optionally** 2x regulator to supply servos with a higher voltage than the 5V required for the  pi)
+- **Arduino** Uno 
+- **6x** MG996R metal gear servos
+- **2x** 38mm NEMA17 stepper motors
+- **2x** A4988 (or **DRV8825**) stepper motor drivers 
+- Arduino CNC Shield
+- MPU-6050 gyro/accelerometer
+- 11.1V 2800mAh 3S LiPo (**LiPo battery charger is required**)
+##### Mechanical components
+- **Optional** Grippy rubber material for tyre tread if you are using the [Wheel](https://github.com/raspibotics/MABEL/blob/master/CAD/3D%20Models%20(To%20print)/Wheel.stl) provided.
+- **6x** Aluminium servo horns (for **MG996R** servos)
+- **8x** 	10mm diameter bearings (5mm internal diameter) x 4mm depth 
+- **12x** 10mm M3 bolts
+- **12** 15mm M5 bolts
+- **4x** 30mm M5 bolts
+- **16x** 15mm M4 bolts
+- **20x** M5 locknuts and washers
 
