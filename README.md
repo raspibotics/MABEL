@@ -1,7 +1,7 @@
 # MABEL (Multi Axis Balancer Electronically Levelled)
 ## Table of contents
  - [About MABEL](#About-MABEL)
-  - [Features and design](#Features-and-design)
+   - [Features and design](#Features-and-design)
 
 ## About MABEL
 MABEL is an open source self balancing robot that is inspired by the famous [Boston Dynamics Handle robot](http://https://www.youtube.com/watch?v=-7xvqQeoA8c "Boston Dynamics Handle robot"). The robot is controlled via an Arduino that handles all of the PID calculations (based off of open source[ YABR](http://http://www.brokking.net/yabr_main.html " YABR") firmware) based on the angle received from an MPU-6050 Accelerometer/Gyro, whilst the pi manages Bluetooth and servo control, running an inverse kinematics algorithm to translate the robot legs perfectly in two axes.
