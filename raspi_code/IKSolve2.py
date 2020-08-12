@@ -20,10 +20,11 @@ class IKSolve:  # IKSolve - Inverse Kinematics solver for MABEL
         self.a_const_0 = (upper_leg ** 2) - (lower_leg ** 2)  # b^2 - a^2
         self.a_const_1 = 2 * upper_leg  # 2*b (c is unknown)
 
-        self.b_const_0 = (upper_leg ** 2) + (lower_leg ** 2)  # b^2 + c^2
+        self.b_const_0 = (upper_leg ** 2) + (lower_leg ** 2)   # b^2 + c^2
         self.b_const_1 = 2 * upper_leg * lower_leg  # 2bc
 
-    def translate_xy(self, x, y, flip=False):  # translate_xy(x, y) Calculates the required angles to move to (x, y) mm
+    def translate_xy(self, x, y, flip=False):  # translate_xy(x, y, flip) Calculates the required angles to move...
+        # ...(x, y) mm - flip is used to invert the direction of the legs
         if x == 0 and y == 0:  # (0, 0) resets servos to home position
             return self.ru_home, self.rl_home, self.lu_home, self.ll_home
         else:
