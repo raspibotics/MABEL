@@ -42,7 +42,8 @@ Some of the stand-out features that make MABEL different from other balancing ro
 
 ### Non 3D Printable
 Here are the Non 3D printable materials to build MABEL that **must be either purchased or sourced**. **This includes all of the electronics, mechanical hardware and fixings.** It is **recommended to overbuy the nuts and bolts fixings, as the exact number can change between builds.** This [amazon list](https://www.amazon.co.uk/gp/registry/wishlist/1K7SOU8MRG2K7/ref=cm_wl_huc_view) contains a rough idea of what needs to be purchased.
-#### Electronic components
+
+##### Electronic components
 - **Raspberry Pi** Zero W
 - **PCA9865** Servo Controller
 - **Variable voltage regulator** (**Optionally** 2x regulator to supply servos with a higher voltage than the 5V required for the  pi)
@@ -53,7 +54,8 @@ Here are the Non 3D printable materials to build MABEL that **must be either pur
 - Arduino CNC Shield
 - MPU-6050 gyro/accelerometer
 - 11.1V 2800mAh 3S LiPo (**LiPo battery charger is required**)
-#### Mechanical components
+
+##### Mechanical components
 - **Optional** Grippy rubber material for tyre tread if you are using the [Wheel](https://github.com/raspibotics/MABEL/blob/master/CAD/3D%20Models%20(To%20print)/Wheel.stl) provided.
 - **6x** Aluminium servo horns (for **MG996R** servos)
 - **8x** 	10mm diameter bearings (5mm internal diameter) x 4mm depth 
