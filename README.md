@@ -16,6 +16,12 @@ By having a balancing platform with articulated legs MABEL will be able to activ
 
 MABEL has built on the open source [YABR](http://http://www.brokking.net/yabr_main.html "YABR") project for the PID controller but with the addition of servos and a pi that helps interface them and control everything.
 ### Features and design 
+Some of the stand-out features that make MABEL different from other balancing robots are:
+- **Movable Legs** (**Enhanced mobility**, **terrain** and **stabilisation** capabilities)
+- **Inverse Kinematics** for each legs for accurate translation in (x, y) coordinates using the [IKSolve.py](https://github.com/raspibotics/MABEL/blob/master/Raspberry%20Pi%20Code/IKSolve2.py) class
+- **Raspberry Pi** enabled (for **Bluetooth control**, **wireless connectivity** and **Computer Vision** capabilities)
+- **Common/cheap build materials** (All of the materials can be purchased off of Amazon/Ebay for a low cost)
+- **Stepper Motors** (Accurate positioning and precise control)
 
 ## Bill of materials
 ### 3D Printable
@@ -32,3 +38,4 @@ MABEL has built on the open source [YABR](http://http://www.brokking.net/yabr_ma
 - **1x** [UpperBody](https://github.com/raspibotics/MABEL/blob/master/CAD/3D%20Models%20(To%20print)/UpperBody.stl) (**UPPER** body housing for MABEL)
 - **2x** [Wheel](https://github.com/raspibotics/MABEL/blob/master/CAD/3D%20Models%20(To%20print)/Wheel.stl) (**Optional** You can 3D Print your own set of wheels, or buy wheels)
 ### Non 3D Printable
+Here are the Non 3D printable materials to build MABEL that **must be either purchased or sourced**. **This includes all of the electronics, mechanical hardware and fixings.**
