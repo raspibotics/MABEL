@@ -3,11 +3,14 @@
 ## Table of contents
  - [About MABEL](#About-MABEL)
    - [Features and design](#Features-and-design)
- - [Bill of Materials (BOM)](#Bill-of-materials)
+ - [Bill of Materials (BOM)](#Billofmaterials)
    - [3D Printable](#3D-Printable)
    - [Non 3D Printable](#Non-3D-Printable)
      - [Electronic components](#Electronic-components)
      - [Mechcanical components](#Mechanical-components)
+ - [Build instructions](#Build-instructions)
+     - [Mechanical assembly](#Mechanical-assembly)
+     - [Electronics assembly](#Electronics-assembly)
  - [Contact/Support](#contactsupport)
 
 ## About MABEL
@@ -65,6 +68,14 @@ Here are the Non 3D printable materials to build MABEL that **must be either pur
 - **4x** 30mm M5 bolts
 - **16x** 15mm M4 bolts
 - **20x** M5 locknuts and washers
+
+## Build instructions
+***This section is yet to be completed...*** 
+### Mechanical assembly
+***This section will contain instructions about the construction of the robot chassis and  frame***
+### Electronics Assembly
+***This section will contain instructions about the construction of the robot electronics***
+
 
 ## Contact/Support
 Thanks for taking an interest in MABEL and its development! If you have any questions or need information whilst building MABEL, please feel free to mention me on twitter [@raspibotics](https://twitter.com/raspibotics) or send me an email at **raspibotics@gmail.com**. ***Whilst this page is still undergoing development, you can find updates and more information on my blog https://raspibotics.wixsite.com/pibotics-blog, where I have been posting about the development of MABEL.***
