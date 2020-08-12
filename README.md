@@ -3,7 +3,7 @@
 ## Table of contents
  - [About MABEL](#About-MABEL)
    - [Features and design](#Features-and-design)
- - [Bill of Materials (BOM)](#Bill-of-materials-(BOM))
+ - [Bill of Materials (BOM)](#Bill-of-materials)
    - [3D Printable](#3D-Printable)
    - [Non 3D Printable](#Non-3D-Printable)
 
@@ -17,7 +17,7 @@ By having a balancing platform with articulated legs MABEL will be able to activ
 MABEL has built on the open source [YABR](http://http://www.brokking.net/yabr_main.html "YABR") project for the PID controller but with the addition of servos and a pi that helps interface them and control everything.
 ### Features and design 
 
-## Bill of materials (BOM)
+## Bill of materials
 ### 3D Printable
 3D Printable files are found in [/CAD/3D Models (To Print)](https://github.com/raspibotics/MABEL/tree/master/CAD/3D%20Models%20(To%20print))
 - **1x** [BatteryPack](https://github.com/raspibotics/MABEL/blob/master/CAD/3D%20Models%20(To%20print)/BatteryPack.stl) (**Optional** - holds LiPo battery onto back of robot with M5 Bolts)
