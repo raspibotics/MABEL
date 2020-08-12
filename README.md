@@ -18,5 +18,5 @@ MABEL has built on the open source [YABR](http://http://www.brokking.net/yabr_ma
 
 ## Bill of materials (BOM)
 ### 3D Printable
-3D Printable files are found in /CAD/
+3D Printable files are found in [/CAD/3D Models (To Print)/](https://github.com/raspibotics/MABEL/tree/master/CAD/3D%20Models%20(To%20print))
 ### Non 3D Printable
