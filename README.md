@@ -8,6 +8,7 @@
    - [Non 3D Printable](#Non-3D-Printable)
      - [Electronic components](#Electronic-components)
      - [Mechcanical components](#Mechanical-components)
+ - [Contact/Support](#Contact/support)
 
 ## About MABEL
 MABEL is an open source self balancing robot that is inspired by the famous [Boston Dynamics Handle robot](http://https://www.youtube.com/watch?v=-7xvqQeoA8c "Boston Dynamics Handle robot"). The robot is controlled via an Arduino that handles all of the PID calculations (based off of open source [YABR](http://http://www.brokking.net/yabr_main.html " YABR") firmware) based on the angle received from an MPU-6050 Accelerometer/Gyro, whilst the pi manages Bluetooth and servo control, running an inverse kinematics algorithm to translate the robot legs perfectly in two axes.
@@ -65,3 +66,5 @@ Here are the Non 3D printable materials to build MABEL that **must be either pur
 - **16x** 15mm M4 bolts
 - **20x** M5 locknuts and washers
 
+## Contact/Support
+Thanks for taking an interest in MABEL and its development! If you have any questions or need information whilst building MABEL, please feel free to mention me on [twitter](https://twitter.com/raspibotics) or send me an email at **raspibotics@gmail.com**
