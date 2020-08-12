@@ -18,7 +18,7 @@ MABEL has built on the open source [YABR](http://http://www.brokking.net/yabr_ma
 
 ## Bill of materials (BOM)
 ### 3D Printable
-3D Printable files are found in [/CAD/3D Models (To Print)/(https://github.com/raspibotics/MABEL/tree/master/CAD/3D%20Models%20(To%20print))
+3D Printable files are found in [/CAD/3D Models (To Print)](https://github.com/raspibotics/MABEL/tree/master/CAD/3D%20Models%20(To%20print))
 - **1x** [BatteryPack](https://github.com/raspibotics/MABEL/blob/master/CAD/3D%20Models%20(To%20print)/BatteryPack.stl) (**Optional** - holds LiPo battery onto back of robot with M5 Bolts)
 - **2x** [BodyPanel](https://github.com/raspibotics/MABEL/blob/master/CAD/3D%20Models%20(To%20print)/BodyPanel.stl) (Mounting for the 'Hip' servos and side panels of the body)
 - **1x** [BodyTop](https://github.com/raspibotics/MABEL/blob/master/CAD/3D%20Models%20(To%20print)/BodyTop.stl)
