@@ -67,4 +67,4 @@ Here are the Non 3D printable materials to build MABEL that **must be either pur
 - **20x** M5 locknuts and washers
 
 ## Contact/Support
-Thanks for taking an interest in MABEL and its development! If you have any questions or need information whilst building MABEL, please feel free to mention me on [twitter](https://twitter.com/raspibotics) or send me an email at **raspibotics@gmail.com**
+Thanks for taking an interest in MABEL and its development! If you have any questions or need information whilst building MABEL, please feel free to mention me on twitter [@raspibotics](https://twitter.com/raspibotics) or send me an email at **raspibotics@gmail.com**. ***Whilst this page is still undergoing development, you can find updates and more information on my blog https://raspibotics.wixsite.com/pibotics-blog, where I have been posting about the development of MABEL.***
