@@ -84,7 +84,7 @@ Here are the Non 3D printable materials to build MABEL that **must be either pur
 
 ## Usage 
 ### IKSolve - (Inverse Kinematics for MABEL)
-**IKSolve** is the class that handles the i**nverse kinematics** functionality for MABEL is [IKSolve.py](https://github.com/raspibotics/MABEL/blob/master/raspi_code/IKSolve.py) and allows for the legs to be translated using **(x, y)** coordinates. It's really simple to use, all that you need to specify are the **home values of each servo** (these are the angles that when passed over to your servos, make the legs point **directly and straight downwards** at **90 degrees**). 
+**IKSolve** is the class that handles the **inverse kinematics** functionality for MABEL [(IKSolve.py)](https://github.com/raspibotics/MABEL/blob/master/raspi_code/IKSolve.py) and allows for the legs to be translated using **(x, y)** coordinates. It's really simple to use, all that you need to specify are the **home values of each servo** (these are the angles that when passed over to your servos, make the legs point **directly and straight downwards** at **90 degrees**). 
 
  
  *The code below is taken directly from [IKDemo.py](https://github.com/raspibotics/MABEL/blob/master/raspi_code/IKDemo.py)*
