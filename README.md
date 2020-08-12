@@ -2,15 +2,15 @@
 ![MABEL](https://i.imgur.com/ciOArSG.jpeg "MABEL")
 ## Table of contents
  - [About MABEL](#About-MABEL)
-   - [Features and design](#Features-and-design)
- - [Bill of Materials (BOM)](#Billofmaterials)
+   - [Features and design](#features-and-design)
+ - [Bill of Materials (BOM)](#bill-of-materials)
    - [3D Printable](#3D-Printable)
-   - [Non 3D Printable](#Non-3D-Printable)
-     - [Electronic components](#Electronic-components)
-     - [Mechcanical components](#Mechanical-components)
- - [Build instructions](#Build-instructions)
-     - [Mechanical assembly](#Mechanical-assembly)
-     - [Electronics assembly](#Electronics-assembly)
+   - [Non 3D Printable](#non-3D-Printable)
+     - [Electronic components](#electronic-components)
+     - [Mechcanical components](#mechanical-components)
+ - [Build instructions](#build-instructions)
+     - [Mechanical assembly](#mechanical-assembly)
+     - [Electronics assembly](#electronics-assembly)
  - [Contact/Support](#contactsupport)
 
 ## About MABEL
