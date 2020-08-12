@@ -21,7 +21,7 @@ MABEL has built on the open source [YABR](http://http://www.brokking.net/yabr_ma
 ### Features and design 
 Some of the stand-out features that make MABEL different from other balancing robots are:
 - **Movable Legs** (**Enhanced mobility**, **terrain** and **stabilisation** capabilities)
-- **Inverse Kinematics** for each leg, enabling accurate translation in (x, y) coordinates using the [IKSolve.py](https://github.com/raspibotics/MABEL/blob/master/Raspberry%20Pi%20Code/IKSolve2.py) class
+- **Inverse Kinematics** for each legs that enables accurate translation in (x, y) coordinates using the [IKSolve.py](https://github.com/raspibotics/MABEL/blob/master/raspi_code/IKSolve2.py) class
 - **Raspberry Pi** enabled (for **Bluetooth control**, **wireless connectivity** and **Computer Vision** capabilities)
 - **Common/cheap build materials** (All of the materials can be purchased off of Amazon/Ebay for a low cost)
 - **Stepper Motors** (Accurate positioning and precise control)
