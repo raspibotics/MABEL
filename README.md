@@ -5,7 +5,7 @@
    - [Features and design](#features-and-design)
  - [Bill of Materials (BOM)](#bill-of-materials)
    - [3D Printable](#3d-printable)
-   - [Non 3D Printable](#non-3d-Printable)
+   - [Non 3D Printable](#non-3d-printable)
      - [Electronic components](#electronic-components)
      - [Mechcanical components](#mechanical-components)
  - [Build instructions](#build-instructions)
