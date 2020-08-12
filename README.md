@@ -1,5 +1,5 @@
 # MABEL (Multi Axis Balancer Electronically Levelled)
-![MABEL](https://github.com/raspibotics/MABEL/blob/master/docs/images/MABEL.jpeg "MABEL")
+![MABEL](https://i.imgur.com/ciOArSG.jpeg "MABEL")
 ## Table of contents
  - [About MABEL](#About-MABEL)
    - [Features and design](#features-and-design)
