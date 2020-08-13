@@ -19,7 +19,7 @@
  - [Contact/Support](#contactsupport)
 
 ## About MABEL
-MABEL is an open source self balancing robot that is inspired by the famous [Boston Dynamics Handle robot](https://www.youtube.com/watch?v=-7xvqQeoA8c "Boston Dynamics Handle robot"). The robot is controlled via an Arduino that handles all of the PID calculations (based off of open source [YABR](http://www.brokking.net/yabr_main.html " YABR") firmware) based on the angle received from an MPU-6050 Accelerometer/Gyro, whilst the pi manages Bluetooth and servo control, running an inverse kinematics algorithm to translate the robot legs perfectly in two axes.
+MABEL is an open source self balancing robot that is inspired by the famous [Boston Dynamics Handle robot](https://www.youtube.com/watch?v=-7xvqQeoA8c "Boston Dynamics Handle robot"). The robot is controlled via an Arduino that handles all of the PID calculations (based off of open source [YABR](http://www.brokking.net/yabr_main.html " YABR") firmware) based on the angle received from an MPU-6050 Accelerometer/Gyro, whilst a Raspberry pi (code in python) manages Bluetooth and servo control, running an inverse kinematics algorithm to translate the robot legs perfectly in two axes.
 
 > The goal of MABEL is to create an affordable legged balancing robot platform like the the Boston Dynamics Handle robot that can built on a hobby scale using cheap Amazon parts and components.
 
