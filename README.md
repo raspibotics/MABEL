@@ -164,9 +164,9 @@ while True:
     sendByte |= 0b00000000 
     if controller.direction == 'LEFT': # Controller pseudocode 
         sendByte |= 0b00000001 # This could be any sendByte
-val = pack("B", sendByte)
-ser.write(val) # Send the value over to the arduino 
-sleep(0.04) # Sleep for this period before sending next command
+    val = pack("B", sendByte)
+    ser.write(val) # Send the value over to the arduino 
+    sleep(0.04) # Sleep for this period before sending next command
 ```
 
 
