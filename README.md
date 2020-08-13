@@ -12,8 +12,10 @@
      - [Mechanical assembly](#mechanical-assembly)
      - [Electronics assembly](#electronics-assembly)
  - [Installation](#installation)
+     - [Dependencies](#required-librariesdependencies)
  - [Usage](#usage)
      - [Inverse kinematics - Moving the legs](#iksolve---inverse-kinematics-for-mabel)
+     - [Driving controls and serial communication](#driving-controls)
  - [Contact/Support](#contactsupport)
 
 ## About MABEL
@@ -80,7 +82,18 @@ Here are the Non 3D printable materials to build MABEL that **must be either pur
 ***This section will contain instructions about the construction of the robot electronics***
 
 ## Installation
-***This section will contain instructions about how to download and setup MABELs code and required libraries/dependencies***
+### Required Libraries/Dependencies
+The **MABEL** project relies on multiple open-source and independent libraries, whilst MABELs own classses and functions may run natively, certain libararies are required for full functionality.
+
+- Adafruit ServoKit PCA9865 servo controller library - [Installation guide](https://learn.adafruit.com/adafruit-16-channel-servo-driver-with-raspberry-pi/overview)
+- python3 Cwiid (**Optional** - If you want to use a Wiimote controller) - [Installation guide](https://automaticaddison.com/how-to-make-a-remote-controlled-robot-using-raspberry-pi/)
+- [approxeng.input](https://approxeng.github.io/approxeng.input/) (**Optional** - If you want to use a different controller - **recommended**)
+  
+***The controller code is still under development, however the approxeng.input library is recommended to develop controller code with - Versions for both the approxeng.input libary and Cwiid will be released eventually.***
+
+Aftere following the installation instructions for the [ServoKit](https://learn.adafruit.com/adafruit-16-channel-servo-driver-with-raspberry-pi/overview) and controller library of your choice, you should be able to clone to the Raspberry Pi with `git clone https://www.github.com/raspibotics/MABEL`, all controller code, and other scripts should be written in the [MABEL/raspi_code/](https://github.com/raspibotics/MABEL/tree/master/raspi_code) directory so that the code will be able to reference the code already included.
+
+
 
 ## Usage 
 ### IKSolve - (Inverse Kinematics for MABEL)
@@ -118,6 +131,44 @@ To recieve suitable angles for each servo to move to (x, y) you must use `transl
   # The angles calculated are stored in a tuple E.g. servo_angles[0-3]
   # You can pass these values to your servo controller code
 ```
+### Driving controls
+**MABEL** is designed to work by listening to commands on the Arduino (PID contoller) end that are sent to it by the raspberry pi over serial (using [pySerial](https://pyserial.readthedocs.io/en/latest/)). This allows easy control using bluetooth and web based solutions that are much more difficult to get working on an Arduino. The code snippets below show how you could modify/write your own controller code by sending specific bytes over serial to the arduino and [YABR](http://www.brokking.net/yabr_main.html) based firmware.
+
+In order to use serial commands to drive MABEL around, you first need to find what serial port that the USB connection between the raspberry pi and arduino is called. In my case it was ```/dev/ttyACM0``` but yours could be different. To find what serial port your arduino is connected to, type ```ls /dev/tty*``` into the terminal **without the arduino connected**. Then **reconnect the arduino**, run ```ls /dev/tty*``` again, and make a note of which serial port appears to be listed that was not previously there - **this is your serial port.**
+
+*Once you know what serial port the arduino is connected on, you should initialise the serial class with it:*
+```python
+import serial
+from struct import pack
+from time import sleep
+
+ser = serial.Serial(port='/dev/ttyACM0', # ls /dev/tty* to find your port
+		baudrate = 9600,
+		parity = serial.PARITY_NONE,
+		stopbits = serial.STOPBITS_ONE,
+		bytesize = serial.EIGHTBITS,
+		timeout = 1)
+```
+The YABR code on the arduino accepts bytes [0, 1, 2, 4, 8] as driving input commands, with **0b00000000 being 'No movement/ remain stationary'**:
+```python
+# sendByte code
+# 00000000 - Do nothing
+# 00000001 - Turn left
+# 00000010 - Turn right
+# 00000100 - Move forwards
+# 00001000 - Move backwards
+```
+We can then send these bytes over the serial connection, and tell **MABEL** in which direction to move - Here's an example of how to write to the arduino serial port, with a bit of **controller pseudocode** for clarity:
+```python
+while True:
+    sendByte |= 0b00000000 
+    if controller.direction == 'LEFT': # Controller pseudocode 
+        sendByte |= 0b00000001 # This could be any sendByte
+val = pack("B", sendByte)
+ser.write(val) # Send the value over to the arduino 
+sleep(0.04) # Sleep for this period before sending next command
+```
+
 
 
 ## Contact/Support
