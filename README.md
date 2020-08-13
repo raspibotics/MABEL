@@ -27,7 +27,7 @@ MABEL has built on the open source [YABR](http://www.brokking.net/yabr_main.html
 ### Features and design 
 Some of the stand-out features that make MABEL different from other balancing robots are:
 - **Movable Legs** (**Enhanced mobility**, **terrain** and **stabilisation** capabilities)
-- **Inverse Kinematics** for each legs that enables accurate translation in (x, y) coordinates using the [IKSolve.py](https://github.com/raspibotics/MABEL/blob/master/raspi_code/IKSolve2.py) class
+- **Inverse Kinematics** for each legs that enables accurate translation in (x, y) coordinates using the [IKSolve.py](https://github.com/raspibotics/MABEL/blob/master/raspi_code/IKSolve.py) class
 - **Raspberry Pi** enabled (for **Bluetooth control**, **wireless connectivity** and **Computer Vision** capabilities)
 - **Common/cheap build materials** (All of the materials can be purchased off of Amazon/Ebay for a low cost)
 - **Stepper Motors** (Accurate positioning and precise control)
@@ -121,4 +121,4 @@ To recieve suitable angles for each servo to move to (x, y) you must use `transl
 
 
 ## Contact/Support
-Thanks for taking an interest in MABEL and its development! If you have any questions or need information whilst building MABEL, please feel free to mention me on twitter [@raspibotics](https://twitter.com/raspibotics) or send me an email at **raspibotics@gmail.com**. ***Whilst this page is still undergoing development, you can find updates and more information on my blog https://raspibotics.wixsite.com/pibotics-blog, where I have been posting about the development of MABEL.***
+Thanks for taking an interest in MABEL and its development! If you have any questions or need information whilst building MABEL, please feel free to mention me on twitter [@raspibotics](https://twitter.com/raspibotics) or send me an email at **raspibotics@gmail.com**. ***Whilst this page is still undergoing development, you can find updates and more information on my blog [https://raspibotics.wixsite.com/pibotics-blog](https://raspibotics.wixsite.com/pibotics-blog), where I have been posting about the development of MABEL.***
