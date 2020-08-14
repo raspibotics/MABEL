@@ -101,19 +101,35 @@ Here are the Non 3D printable materials to build MABEL that **must be either pur
 
 
 ### **Step 3:** Push fit and screw the **servo horns** into the [DriverGear](https://github.com/raspibotics/MABEL/blob/master/CAD/3D%20Models%20(To%20print)/DriverGear.stl)(s) and attach the assemblies to the servos 
-<img src="https://i.imgur.com/08lZZj5.jpg" alt="push fit servo horns and attach gear to servo" title="Push fit bearings" width="270" height="200" ALIGN="right" HSPACE="65"/>
+<img src="https://i.imgur.com/08lZZj5.jpg" alt="push fit servo horns and attach gear to servo" title="Assemble DriverGear" width="270" height="200" ALIGN="right" HSPACE="65"/>
 
 Take your **4x DriverGear parts** and **4x Aluminium Servo horns** and push it into the recess on the bottom of the gear. Then **secure the servo horns to each of the gears using the screws** that (should) come with servo horns. Once the gear assembly has been completed, screw it on to the **servo shaft** using **one M3 (10mm) bolt per servo**. [*More reference images for Step 3*](https://github.com/raspibotics/MABEL/tree/master/docs/images/Mech_Step_3)
 
 ---
+
+### **Step 4:** Attach the NEMA17 Motors to the [LowerLeg](https://github.com/raspibotics/MABEL/blob/master/CAD/3D%20Models%20(To%20print)/LowerLeg.stl) and fit the wheels
+<img src="https://i.imgur.com/fxMZ7wn.jpg" alt="push fit servo horns and attach gear to servo" title="Assemble DriverGear" width="270" height="270" ALIGN="right" HSPACE="65"/>
+
+Secure one **NEMA17** (**2x in total**) stepper motor to each of your (**2x**) [LowerLeg](https://github.com/raspibotics/MABEL/blob/master/CAD/3D%20Models%20(To%20print)/LowerLeg.stl) parts with **4x M3 (10mm)** bolts (**8x in total**). Next, prepare your wheels and then **push fit** onto the NEMA17 shafts, **securing if necessary with an M4 bolt**:
+- If you are **using the included** [Wheel](https://github.com/raspibotics/MABEL/blob/master/CAD/3D%20Models%20(To%20print)/Wheel.stl) part, you will **need to wrap the outside** in a thin layer of **grippy material** such as **elastic bands** or in my case, **rubber 'O' rings** which help create **traction**.
+- If you've **sourced your own wheels**, insert them onto the NEMA17 shafts, and secure as necessary. 
+
+[*More reference images for Step 4*](https://github.com/raspibotics/MABEL/tree/master/docs/images/Mech_Step_3)
+
 
 
 
 
 ***UNDER CONSTRUCTION: This section will contain instructions about the construction of the robot chassis and  frame***
 
+
+
+
+---
 ## Electronics Assembly
 ***This section will contain instructions about the construction of the robot electronics***
+
+---
 
 ## Installation
 ### Required Libraries/Dependencies
