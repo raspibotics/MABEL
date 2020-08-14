@@ -19,15 +19,15 @@
  - [Contact/Support](#contactsupport)
 
 ## About MABEL
-MABEL is an open source self balancing robot that is inspired by the famous [Boston Dynamics Handle robot](https://www.youtube.com/watch?v=-7xvqQeoA8c "Boston Dynamics Handle robot"). The robot is controlled via an Arduino that handles all of the PID calculations (based off of open source [YABR](http://www.brokking.net/yabr_main.html " YABR") firmware) based on the angle received from an MPU-6050 Accelerometer/Gyro, whilst a Raspberry pi (code in python) manages Bluetooth and servo control, running an inverse kinematics algorithm to translate the robot legs perfectly in two axes.
+**MABEL** is an **ongoing** open source self balancing robot project that is inspired by the famous [Boston Dynamics Handle robot](https://www.youtube.com/watch?v=-7xvqQeoA8c "Boston Dynamics Handle robot"). The robot is controlled via an **Arduino** that handles all of the PID calculations (based off of open source [YABR](http://www.brokking.net/yabr_main.html " YABR") firmware) based on the angle received from an MPU-6050 Accelerometer/Gyro, whilst a **Raspberry pi** (code in **python**) manages Bluetooth and servo control, running an inverse kinematics algorithm to translate the robot legs perfectly in two axes.
 
-> The goal of MABEL is to create an affordable legged balancing robot platform like the the Boston Dynamics Handle robot that can built on a hobby scale using cheap Amazon parts and components.
+> The goal of **MABEL** is to create an affordable legged balancing robot platform like the the Boston Dynamics Handle robot that can built on a hobby scale using cheap Amazon parts and components.
 
-By having a balancing platform with articulated legs MABEL will be able to actively balance in multiple Axes and vary leg length depending on the surroundings to increase terrain and off-road performance.
+By having a balancing platform with articulated legs **MABEL** will be able to actively balance in multiple Axes and vary leg length depending on the surroundings to increase terrain and off-road performance.
 
-MABEL has built on the open source [YABR](http://www.brokking.net/yabr_main.html "YABR") project for the PID controller but with the addition of servos and a pi that helps interface them and control everything.
+**MABEL** has built on the open source [YABR](http://www.brokking.net/yabr_main.html "YABR") project for the PID controller but with the addition of servos and a pi that helps interface them and control everything.
 ### Features and design 
-Some of the stand-out features that make MABEL different from other balancing robots are:
+Some of the stand-out features that make **MABEL** different from other balancing robots are:
 - **Movable Legs** (**Enhanced mobility**, **terrain** and **stabilisation** capabilities)
 - **Inverse Kinematics** for each legs that enables accurate translation in (x, y) coordinates using the [IKSolve.py](https://github.com/raspibotics/MABEL/blob/master/raspi_code/IKSolve.py) class
 - **Raspberry Pi** enabled (for **Bluetooth control**, **wireless connectivity** and **Computer Vision** capabilities)
@@ -50,7 +50,7 @@ Some of the stand-out features that make MABEL different from other balancing ro
 - **2x** [Wheel](https://github.com/raspibotics/MABEL/blob/master/CAD/3D%20Models%20(To%20print)/Wheel.stl) (**Optional** You can 3D Print your own set of wheels, or buy wheels)
 
 ### Non 3D Printable
-Here are the Non 3D printable materials to build MABEL that **must be either purchased or sourced**. **This includes all of the electronics, mechanical hardware and fixings.** It is **recommended to overbuy the nuts and bolts fixings, as the exact number can change between builds.** This [amazon list](https://www.amazon.co.uk/gp/registry/wishlist/1K7SOU8MRG2K7/ref=cm_wl_huc_view) contains a rough idea of what needs to be purchased.
+Here are the Non 3D printable materials to build **MABEL** that **must be either purchased or sourced**. **This includes all of the electronics, mechanical hardware and fixings.** It is **recommended to overbuy the nuts and bolts fixings, as the exact number can change between builds.** This [amazon list](https://www.amazon.co.uk/gp/registry/wishlist/1K7SOU8MRG2K7/ref=cm_wl_huc_view) contains a rough idea of what needs to be purchased.
 
 ### Electronic components
 - **Raspberry Pi** Zero W
@@ -75,7 +75,11 @@ Here are the Non 3D printable materials to build MABEL that **must be either pur
 - **20x** M5 locknuts and washers
 
 ## Build instructions
-***This section is yet to be completed...*** 
+***UNDER CONSTRUCTION**: This section will include:*
+- *Recommended 3D printer settings for 3D Printable parts*
+- *Mechanical assembly instructions*
+- *Electronics/Wiring instructions*
+
 ## Mechanical assembly
 ---
 
@@ -125,13 +129,6 @@ Now that you have fitted the BodyPanel and UpperLeg parts with servos (**Step 2*
 [*More reference images for Step 5*](https://github.com/raspibotics/MABEL/tree/master/docs/images/Mech_Step_5)
 
 ---
-
-***UNDER CONSTRUCTION: This section will contain instructions about the construction of the robot chassis and  frame***
-
-
-
-
----
 ## Electronics Assembly
 ***This section will contain instructions about the construction of the robot electronics***
 
@@ -152,7 +149,7 @@ Aftere following the installation instructions for the [ServoKit](https://learn.
 
 ## Usage 
 ### IKSolve - (Inverse Kinematics for MABEL)
-**IKSolve** is the class that handles the **inverse kinematics** functionality for MABEL [(IKSolve.py)](https://github.com/raspibotics/MABEL/blob/master/raspi_code/IKSolve.py) and allows for the legs to be translated using **(x, y)** coordinates. It's really simple to use, all that you need to specify are the **home values of each servo** (these are the angles that when passed over to your servos, make the legs point **directly and straight downwards** at **90 degrees**). Keep in mind that the values below are just my servo home positions, and **yours will be different**. 
+**IKSolve** is the class that handles the **inverse kinematics** functionality for **MABEL** [(IKSolve.py)](https://github.com/raspibotics/MABEL/blob/master/raspi_code/IKSolve.py) and allows for the legs to be translated using **(x, y)** coordinates. It's really simple to use, all that you need to specify are the **home values of each servo** (these are the angles that when passed over to your servos, make the legs point **directly and straight downwards** at **90 degrees**). Keep in mind that the values below are just my servo home positions, and **yours will be different**. 
 
  
  *The code below is taken directly from [IKDemo.py](https://github.com/raspibotics/MABEL/blob/master/raspi_code/IKDemo.py)*
