@@ -82,7 +82,7 @@ Here are the Non 3D printable materials to build MABEL that **must be either pur
 
 
 ### **Step 1:** Press the bearings into the joints 
-<img src="https://i.imgur.com/iYMrObD.jpg" alt="push fit the bearings and secure with a nut and bolt" title="Push fit bearings" width="240" height="210" ALIGN="right" HSPACE="65"/>
+<img src="https://i.imgur.com/iYMrObD.jpg" alt="push fit the bearings and secure with a nut and bolt" title="Push fit bearings" width="270" height="210" ALIGN="right" HSPACE="65"/>
 
  Each leg section ([UpperLeg](https://github.com/raspibotics/MABEL/blob/master/CAD/3D%20Models%20(To%20print)/UpperLeg.stl)  and [LowerLeg](https://github.com/raspibotics/MABEL/blob/master/CAD/3D%20Models%20(To%20print)/LowerLeg.stl)) requires **two bearings (thats 8x bearings in total) to push fit on opposing sides** to ensure smooth rotation. The bearings can be quite tricky to fit so it's **advisable to either apply slow, even pressure with a bench vice**, or to **soften the plastic with a hairdryer** to make it easier to push in by hand. Once you've fitted the bearings, you need to **push an M5 (30mm) bolt through** the hole left and **secure with a locknut**.
  [*More reference images for Step 1*](https://github.com/raspibotics/MABEL/tree/master/docs/images/Mech_Step_1)
