@@ -79,7 +79,7 @@ Here are the Non 3D printable materials to build MABEL that **must be either pur
 ## Mechanical assembly
 ---
 
-<img src="https://i.imgur.com/iYMrObD.jpg" alt="push fit the bearings and secure with a nut and bolt" title="Push fit bearings" width="250" height="220" ALIGN="right" HSPACE="65"/>
+<img src="https://i.imgur.com/iYMrObD.jpg" alt="push fit the bearings and secure with a nut and bolt" title="Push fit bearings" width="240" height="210" ALIGN="right" HSPACE="65"/>
 
 ### **Step 1:** Press the bearings into the joints 
 
