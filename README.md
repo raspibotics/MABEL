@@ -120,6 +120,8 @@ Secure one **NEMA17** (**2x in total**) stepper motor to each of your (**2x**) [
 
 [*More reference images for Step 4*](https://github.com/raspibotics/MABEL/tree/master/docs/images/Mech_Step_4)
 
+---
+
 ### **Step 5:** Attach the [LowerLeg](https://github.com/raspibotics/MABEL/blob/master/CAD/3D%20Models%20(To%20print)/LowerLeg.stl), [UpperLeg](https://github.com/raspibotics/MABEL/blob/master/CAD/3D%20Models%20(To%20print)/UpperLeg.stl) and [BodyPanel](https://github.com/raspibotics/MABEL/blob/master/CAD/3D%20Models%20(To%20print)/BodyPanel.stl) assemblies together using **4x M5 locknuts**
 
 <img src="https://i.imgur.com/KUTSnZk.jpg" alt="Attach all assemblies so far together" title="Fit everything together" width="270" height="200" ALIGN="right" HSPACE="65"/>
