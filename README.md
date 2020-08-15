@@ -54,7 +54,7 @@ Here are the Non 3D printable materials to build **MABEL** that **must be either
 
 ### Electronic components
 - **Raspberry Pi** Zero W
-- **PCA9865** Servo Controller
+- **PCA9865** Servo Controller (A **PiconZero** could, and previously was used)
 - **Variable voltage regulator** (**Optionally** 2x regulator to supply servos with a higher voltage than the 5V required for the  pi)
 - **Arduino** Uno 
 - **6x** MG996R metal gear servos
