@@ -124,7 +124,9 @@ Secure one **NEMA17** (**2x in total**) stepper motor to each of your (**2x**) [
 
 <img src="https://i.imgur.com/KUTSnZk.jpg" alt="Attach all assemblies so far together" title="Fit everything together" width="270" height="200" ALIGN="right" HSPACE="65"/>
 
-Now that you have fitted the BodyPanel and UpperLeg parts with servos (**Step 2**) and gears (**Step 3**), and prepared the UpperLeg and LowerLeg sections with bearings, an M5 bolt and a lock nut each (**Step 1**), you can **insert the UpperLeg section into the BodyPanel** and **secure it with a locknut** on the back (servo) side. Then, **secure the LowerLeg assembly to the UpperLeg** assembly with another **M5 locknut** to form one leg. **This step should then be repeated for the side.**
+Now that you have fitted the BodyPanel and UpperLeg parts with servos (**Step 2**) and gears (**Step 3**), and prepared the UpperLeg and LowerLeg sections with bearings, an M5 bolt and a lock nut each (**Step 1**), you can **insert the UpperLeg section into the BodyPanel** and **secure it with a locknut** on the back (servo) side. Then, **secure the LowerLeg assembly to the UpperLeg** assembly with another **M5 locknut** to form one leg. **This step should then be repeated for the side.** 
+
+**NOTE:** When fitting the parts together, **special attention** should be considered to the **position of the servo rotors**. With standard 180 degree servos, full range of motion is only possible with one way of the legs being bent (The minimum leg height requires a greater than 90 degree angle for example) - **decide which way the legs should bend out** and turn the servo gear manually by hand to **allow a greater range of motion in that direction** than the other (it will be opposite because of the gear drive). You will then **calibrate the servos later on** with a new 0 **position** that's needed for the legs to work properly.
 
 [*More reference images for Step 5*](https://github.com/raspibotics/MABEL/tree/master/docs/images/Mech_Step_5)
 
