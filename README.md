@@ -124,7 +124,7 @@ Secure one **NEMA17** (**2x in total**) stepper motor to each of your (**2x**) [
 
 ### **Step 5:** Attach the [LowerLeg](https://github.com/raspibotics/MABEL/blob/master/CAD/3D%20Models%20(To%20print)/LowerLeg.stl), [UpperLeg](https://github.com/raspibotics/MABEL/blob/master/CAD/3D%20Models%20(To%20print)/UpperLeg.stl) and [BodyPanel](https://github.com/raspibotics/MABEL/blob/master/CAD/3D%20Models%20(To%20print)/BodyPanel.stl) assemblies together using **4x M5 locknuts**
 
-<img src="https://i.imgur.com/KUTSnZk.jpg" alt="Attach all assemblies so far together" title="Fit everything together" width="270" height="200" ALIGN="right" HSPACE="65"/>
+<img src="https://i.imgur.com/KUTSnZk.jpg" alt="Attach all assemblies so far together" title="Fit everything together" width="300" height="200" ALIGN="right" HSPACE="65" VSPACE="5"/>
 
 Now that you have fitted the BodyPanel and UpperLeg parts with servos (**Step 2**) and gears (**Step 3**), and prepared the UpperLeg and LowerLeg sections with bearings, an M5 bolt and a lock nut each (**Step 1**), you can **insert the UpperLeg section into the BodyPanel** and **secure it with a locknut** on the back (servo) side. Then, **secure the LowerLeg assembly to the UpperLeg** assembly with another **M5 locknut** to form one leg. **This step should then be repeated for the side.** 
 
@@ -154,7 +154,6 @@ Aftere following the installation instructions for the [ServoKit](https://learn.
 ## Usage 
 ### IKSolve - (Inverse Kinematics for MABEL)
 **IKSolve** is the class that handles the **inverse kinematics** functionality for **MABEL** [(IKSolve.py)](https://github.com/raspibotics/MABEL/blob/master/raspi_code/IKSolve.py) and allows for the legs to be translated using **(x, y)** coordinates. It's really simple to use, all that you need to specify are the **home values of each servo** (these are the angles that when passed over to your servos, make the legs point **directly and straight downwards** at **90 degrees**). Keep in mind that the values below are just my servo home positions, and **yours will be different**. 
-
  
  *The code below is taken directly from [IKDemo.py](https://github.com/raspibotics/MABEL/blob/master/raspi_code/IKDemo.py)*
 
@@ -187,6 +186,11 @@ To recieve suitable angles for each servo to move to (x, y) you must use `transl
   # The angles calculated are stored in a tuple E.g. servo_angles[0-3]
   # You can pass these values to your servo controller code
 ```
+Here are the **mathematical equations** that were calculated for MABELs inverse kinematics, and are expressed in the ```translate_xy()``` function in IKSolve. A is used for calculating angles for the top servos (mounted to the BodyPanel) B is used to calculate angles for the 'Knee' servos. ***Upper*** represents the distance of the **UpperLeg** from pivot to pivot and ***lower*** represents the distance between the **LowerLeg** pivot and centre of the wheel (motor shaft).
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=A&space;=&space;Cos^{-1}(\frac{upper^{2}&plus;x^{2}-lower^{2}}{2\cdot&space;upper\cdot&space;x})&space;&plus;&space;Tan^{-1}(\frac{y}{x})" target="_blank"><img src="https://latex.codecogs.com/png.latex?A&space;=&space;Cos^{-1}(\frac{upper^{2}&plus;x^{2}-lower^{2}}{2\cdot&space;upper\cdot&space;x})&space;&plus;&space;Tan^{-1}(\frac{y}{x})" title="A = Cos^{-1}(\frac{upper^{2}+x^{2}-lower^{2}}{2\cdot upper\cdot x}) + Tan^{-1}(\frac{y}{x})" /></a>
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=B&space;=&space;Cos^{-1}(\frac{upper^{2}&plus;lower^{2}-(x^{2}&plus;y^{2})}{2\cdot&space;upper\cdot&space;lower})" target="_blank"><img src="https://latex.codecogs.com/png.latex?B&space;=&space;Cos^{-1}(\frac{upper^{2}&plus;lower^{2}-(x^{2}&plus;y^{2})}{2\cdot&space;upper\cdot&space;lower})" title="B = Cos^{-1}(\frac{upper^{2}+lower^{2}-(x^{2}+y^{2})}{2\cdot upper\cdot lower})" /></a>
 ### Driving controls
 **MABEL** is designed to work by listening to commands on the Arduino (PID contoller) end that are sent to it by the raspberry pi over serial (using [pySerial](https://pyserial.readthedocs.io/en/latest/)). This allows easy control using bluetooth and web based solutions that are much more difficult to get working on an Arduino. The code snippets below show how you could modify/write your own controller code by sending specific bytes over serial to the arduino and [YABR](http://www.brokking.net/yabr_main.html) based firmware.
 

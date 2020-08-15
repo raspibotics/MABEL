@@ -13,7 +13,7 @@ class IKSolve:  # IKSolve - Inverse Kinematics solver for MABEL
 
     def __init__(self, ru_home, rl_home, lu_home,  # IKSolve Constructor, Values are default leg section lengths in mm
                  ll_home, upper_leg=92, lower_leg=75):
-
+       
         self.ru_home, self.rl_home = ru_home, rl_home  # Right leg servo home positions
         self.lu_home, self.ll_home = lu_home, ll_home  # Left leg servo home positions
 
@@ -29,10 +29,10 @@ class IKSolve:  # IKSolve - Inverse Kinematics solver for MABEL
             return self.ru_home, self.rl_home, self.lu_home, self.ll_home
         else:
             try:
-                angle_a = degrees(acos(((self.a_const_0 + (x ** 2)) /  # A = Cos^-1((b^2+c^2-a^2)/2bc)
+                angle_a = degrees(acos(((self.a_const_0 + (x ** 2)) /  # A = Cos^-1((b^2+c^2-a^2)/2bc) - Cosine rule
                                         (self.a_const_1 * x))))
                 angle_a += degrees(atan2(y, x))  # Tan^-1(y/x)
-                angle_b = 180 - degrees(acos((self.b_const_0 - (x ** 2 + y ** 2)) /  # A = Cos^-1((b^2+c^2-a^2)/2bc)
+                angle_b = 180 - degrees(acos((self.b_const_0 - (x ** 2 + y ** 2)) /   
                                              self.b_const_1))
             except ValueError:
                 print('Value specified is outside range of capable movement. Please specify a different value...')
