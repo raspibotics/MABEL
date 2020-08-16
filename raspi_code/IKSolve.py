@@ -8,6 +8,9 @@
 
 from math import acos, degrees, atan2
 
+if __name__ == "__main__":
+    print('Please run IKDemo.py instead...')
+
 
 class IKSolve:  # IKSolve - Inverse Kinematics solver for MABEL
 

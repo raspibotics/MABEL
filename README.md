@@ -139,7 +139,7 @@ Now that you have fitted the BodyPanel and UpperLeg parts with servos (**Step 2*
 ---
 ## Installation
 ### Required Libraries/Dependencies
-The **MABEL** project relies on multiple open-source and independent libraries, whilst MABELs own classses and functions may run natively, certain libararies are required for full functionality.
+The **MABEL** project relies on multiple open-source and independent libraries, whilst MABELs own classses and functions may run natively, certain libraries are required for full functionality.
 
 - Adafruit ServoKit PCA9865 servo controller library - [Installation guide](https://learn.adafruit.com/adafruit-16-channel-servo-driver-with-raspberry-pi/overview)
 - python3 Cwiid (**Optional** - If you want to use a Wiimote controller) - [Installation guide](https://automaticaddison.com/how-to-make-a-remote-controlled-robot-using-raspberry-pi/)
@@ -160,13 +160,14 @@ Aftere following the installation instructions for the [ServoKit](https://learn.
 ```python
 from IKSolve import IKSolve
 
-# Servo Home Values (degrees)
-ru_home = 50   # Right leg upper joint home position (servo_angle[0])
-rl_home = 109   # Right leg lower joint home position (servo_angle[1])
-lu_home = 52   # Left leg upper joint home position (servo_angle[2])
-ll_home = 23   # Left leg lower joint home position (servo_angle[3])
+# Servo Home Values (degrees) - ***YOURS WILL DIFFER***
+# ru_home = 50   # Right leg upper joint home position (servo_angle[0])
+# rl_home = 109   # Right leg lower joint home position (servo_angle[1])
+# lu_home = 52   # Left leg upper joint home position (servo_angle[2])
+# ll_home = 23   # Left leg lower joint home position (servo_angle[3])
  
-IKSolve = IKSolve(ru_home, rl_home, lu_home, ll_home)  # Pass home positions to IK class
+ik_handler = IKSolve(ru_home=50, rl_home=109,  # Pass home positions to IK class
+                     lu_home=52, ll_home=23)  
 ```
 ***The class can also be initialised with different leg length segments but these are best left to default unless you have changed the length of any of the leg components.***
 ```python
@@ -182,7 +183,9 @@ To recieve suitable angles for each servo to move to (x, y) you must use `transl
  - **y is the distance between the upper leg pivot and wheel centre** (Horizontally) - acceptable range for MABEL (-50, 50mm)
  
 ```python
-  servo_angle = IKSolve.translate_xy(x, y, flip=False) 
+  x = int(input('x:'))
+  y = int(input('y:'))
+  servo_angle = ik_handler.translate_xy(x, y, flip=False) 
   # The angles calculated are stored in a tuple E.g. servo_angles[0-3]
   # You can pass these values to your servo controller code
 ```
