@@ -1,7 +1,7 @@
 # MABEL (Multi Axis Balancer Electronically Levelled)
 ![MABEL](https://i.imgur.com/ciOArSG.jpeg "MABEL")
 ## Table of contents
- - [About MABEL](#About-MABEL)
+ - [About MABEL](#about-mabel)
    - [Features and design](#features-and-design)
  - [Bill of Materials (BOM)](#bill-of-materials)
    - [3D Printable](#3d-printable)
